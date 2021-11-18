@@ -1,11 +1,11 @@
-const { stdin, stdout, argv, exit } = require("process");
+const { stdin, stdout, argv, stderr, exit } = require("process");
 
 const allowedFlags = ["-s", "-m"];
 
 const enteredFlag = argv[2];
 
 function stdOutHandler(message, code) {
-  stdout.write(message);
+  stderr.write(message);
   exit(code);
 }
 
